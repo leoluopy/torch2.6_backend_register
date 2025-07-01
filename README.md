@@ -4,24 +4,31 @@ torch2.6_backend_register
 # reference
 https://pytorch.org/tutorials/advanced/privateuseone.html
 https://pytorch.org/tutorials/advanced/extend_dispatcher.html
-
+https://pytorch.org/tutorials/advanced/torch_script_custom_ops
 https://pytorch.org/tutorials/advanced/dispatcher
 
 
 # HOWTO
+use docker to build 
+https://www.codewithgpu.com/i/vllm-project/vllm/vllm0.8.x_torch2.6_ai_chip_backend
+
 ```
+# use command to remove package 
+pip uninstall torch_tcu
+rm -rf /usr/local/lib/python3.12/dist-packages/torch_tcu*
+
 python setup.py install
+
+python ut_basic_backend.py
+python ut_custom_rms_norm_tcu.py  
+python ut_import_tcu_op_add.py  
+python ut_load_call_backendop.py  
+python ut_load_callbackendModel.py
+
 ```
 
-# torch.ops to extend op
-https://pytorch.org/tutorials/advanced/torch_script_custom_ops
-
-使用基本docker pytorch/pytorch + buildessential
-use python setup.py install , can go through and run ut_load_call_lltm.py
-NOTE: need to run at pytorch/pytorch docker
-
-
-
-
-
+for all steps you can use
+```
+sh run_build_and_test.sh
+```
 

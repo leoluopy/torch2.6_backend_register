@@ -1,0 +1,1474 @@
+running install
+/usr/local/lib/python3.12/dist-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running build
+running build_ext
+building 'torch_tcu' extension
+Emitting ninja build file /home/leo/Downloads/course_prject/torch2.6_backend_register/build/temp.linux-x86_64-cpython-312/build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+[1/1] c++ -MMD -MF /home/leo/Downloads/course_prject/torch2.6_backend_register/build/temp.linux-x86_64-cpython-312/torch_tcu.o.d -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -fPIC -I/usr/local/lib/python3.12/dist-packages/torch/include -I/usr/local/lib/python3.12/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.12/dist-packages/torch/include/TH -I/usr/local/lib/python3.12/dist-packages/torch/include/THC -I/usr/include/python3.12 -c -c /home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp -o /home/leo/Downloads/course_prject/torch2.6_backend_register/build/temp.linux-x86_64-cpython-312/torch_tcu.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=torch_tcu -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+In file included from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec256/vec256.h:8,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec.h:7,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/native/cpu/Loops.h:37,
+                 from /home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:10:
+/usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_base.h:1123: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+ 1123 | # pragma unroll
+      | 
+In file included from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_base.h:1163,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec256/vec256.h:8,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec.h:7,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/native/cpu/Loops.h:37,
+                 from /home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:10:
+/usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_n.h:59: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+   59 | #pragma unroll
+      | 
+/usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_n.h:72: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+   72 | #pragma unroll
+      | 
+/usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_n.h:87: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+   87 | #pragma unroll
+      | 
+In file included from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_base.h:1164,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec256/vec256.h:8,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec.h:7,
+                 from /usr/local/lib/python3.12/dist-packages/torch/include/ATen/native/cpu/Loops.h:37,
+                 from /home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:10:
+/usr/local/lib/python3.12/dist-packages/torch/include/ATen/cpu/vec/vec_mask.h:153: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+  153 | #pragma unroll
+      | 
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp: In function ‘at::Tensor& relu_(at::Tensor&)’:
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:368:12: warning: reference to local variable ‘out_tcu’ returned [-Wreturn-local-addr]
+  368 |     return out_tcu;
+      |            ^~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:365:16: note: declared here
+  365 |     at::Tensor out_tcu = out.to(at::device(c10::kPrivateUse1));
+      |                ^~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp: In function ‘at::Tensor& add_out(const at::Tensor&, const at::Tensor&, const c10::Scalar&, at::Tensor&)’:
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:398:12: warning: reference to local variable ‘sel_nCon’ returned [-Wreturn-local-addr]
+  398 |     return sel_nCon ;
+      |            ^~~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:392:16: note: declared here
+  392 |     at::Tensor sel_nCon = self ;
+      |                ^~~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp: In function ‘at::Tensor& mean_out(const at::Tensor&, at::OptionalIntArrayRef, bool, std::optional<c10::ScalarType>, at::Tensor&)’:
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:418:12: warning: reference to local variable ‘tcu_out’ returned [-Wreturn-local-addr]
+  418 |     return tcu_out;
+      |            ^~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:416:16: note: declared here
+  416 |     at::Tensor tcu_out = cpu_out.to(at::device(c10::kPrivateUse1));
+      |                ^~~~~~~
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp: In function ‘at::Tensor& addmm_out(const at::Tensor&, const at::Tensor&, const at::Tensor&, const c10::Scalar&, const c10::Scalar&, at::Tensor&)’:
+/home/leo/Downloads/course_prject/torch2.6_backend_register/torch_tcu.cpp:460:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  460 | }
+      | ^
+creating build/lib.linux-x86_64-cpython-312
+x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -g -fwrapv -O2 /home/leo/Downloads/course_prject/torch2.6_backend_register/build/temp.linux-x86_64-cpython-312/torch_tcu.o -L/usr/local/lib/python3.12/dist-packages/torch/lib -L/usr/lib/x86_64-linux-gnu -lc10 -ltorch -ltorch_cpu -ltorch_python -o build/lib.linux-x86_64-cpython-312/torch_tcu.cpython-312-x86_64-linux-gnu.so
+running install_lib
+copying build/lib.linux-x86_64-cpython-312/torch_tcu.cpython-312-x86_64-linux-gnu.so -> /usr/local/lib/python3.12/dist-packages
+running install_egg_info
+running egg_info
+creating torch_tcu.egg-info
+writing torch_tcu.egg-info/PKG-INFO
+writing dependency_links to torch_tcu.egg-info/dependency_links.txt
+writing top-level names to torch_tcu.egg-info/top_level.txt
+writing manifest file 'torch_tcu.egg-info/SOURCES.txt'
+[07/01/25 02:45:59] ERROR    listing git files failed - pretending there aren't any                                                                                             git.py:26
+reading manifest file 'torch_tcu.egg-info/SOURCES.txt'
+writing manifest file 'torch_tcu.egg-info/SOURCES.txt'
+Copying torch_tcu.egg-info to /usr/local/lib/python3.12/dist-packages/torch_tcu-0.0.0-py3.12.egg-info
+running install_scripts
+Custom aten::empty.memory_format() called! size: [2, 2]
+Custom allocator's allocate() called!
+tcu:0
+Custom allocator's delete() called!
+Custom aten::empty.memory_format() called! size: [32, 512]
+Custom allocator's allocate() called!
+Custom aten::empty.memory_format() called! size: [512]
+Custom allocator's allocate() called!
+cus backend rms norm
+PASSED
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[4, 4]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom allocator's delete() called!
+Custom aten::empty_strided() called! size:[4, 4]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+  ### TCU Custom aten::add.Tensor() called!
+self.device(): tcu:0, other.device():tcu:0
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+ Go execute To TCU
+   END 
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+  ### TCU Custom aten::add.Tensor() called!
+self.device(): tcu:0, other.device():tcu:0
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom allocator's delete() called!
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+  ### TCU Custom aten::add.Tensor() called!
+self.device(): tcu:0, other.device():tcu:0
+Custom aten::empty.memory_format() called! size: [4, 4]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom allocator's delete() called!
+(Correctly) unable to create tensor on device='bar'
+(Correctly) unable to create tensor on device='tcu:2'
+Creating x on device 'tcu:0'
+Creating y on device 'tcu:0'
+
+Test START
+x.device=tcu:0, x.is_cpu=False
+y.device=tcu:0, y.is_cpu=False
+Calling z = x + y
+z.device=tcu:0, z.is_cpu=False
+Calling z = z.to(device="cpu")
+z_cpu.device=cpu, z_cpu.is_cpu=True
+Calling z2 = z_cpu + z_cpu
+Test END
+
+Creating x on device 'tcu:1'
+Creating y on device 'tcu:1'
+
+Test START
+x.device=tcu:0, x.is_cpu=False
+y.device=tcu:0, y.is_cpu=False
+Calling z = x + y
+z.device=tcu:0, z.is_cpu=False
+Calling z = z.to(device="cpu")
+z_cpu.device=cpu, z_cpu.is_cpu=True
+Calling z2 = z_cpu + z_cpu
+Test END
+
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Custom aten::empty_strided() called! size:[64, 3, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64, 64, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64, 64, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64, 64, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64, 64, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[64]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128, 64, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128, 128, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128, 64, 1, 1]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128, 128, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128, 128, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[128]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256, 128, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256, 256, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256, 128, 1, 1]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256, 256, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256, 256, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[256]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512, 256, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512, 512, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512, 256, 1, 1]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512, 512, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512, 512, 3, 3]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1000, 512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1000]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 3, 224, 224]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 3 x 224 x 224
+Tensor dimensions: 64 x 3 x 7 x 7
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 64 x 112 x 112
+Custom aten::empty_strided() called! size:[1, 64, 112, 112]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 64 x 112 x 112
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 64 x 112 x 112
+Custom aten::empty_strided() called! size:[1, 64, 112, 112]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 112, 112]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 64 x 112 x 112
+Custom allocator's delete() called!
+Calling TCU OP:  max_pool2d 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+max_pool2d out tcu:0Tensor dimensions: 1 x 64 x 56 x 56
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 64 x 64 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 64 x 56 x 56
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 64 x 64 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 64 x 56 x 56
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 64 x 64 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 64 x 56 x 56
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 64 x 64 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+Custom aten::_copy_from() called!
+Tensor dimensions: 64
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 64 x 56 x 56
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 64, 56, 56]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 64 x 56 x 56
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 128 x 64 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 128 x 28 x 28
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Tensor dimensions: 128 x 128 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 64 x 56 x 56
+Tensor dimensions: 128 x 64 x 1 x 1
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 128 x 28 x 28
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Tensor dimensions: 128 x 128 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 128 x 28 x 28
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Tensor dimensions: 128 x 128 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+Custom aten::_copy_from() called!
+Tensor dimensions: 128
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 128 x 28 x 28
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 128, 28, 28]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 128 x 28 x 28
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Tensor dimensions: 256 x 128 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 256 x 14 x 14
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Tensor dimensions: 256 x 256 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 128 x 28 x 28
+Tensor dimensions: 256 x 128 x 1 x 1
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 256 x 14 x 14
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Tensor dimensions: 256 x 256 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 256 x 14 x 14
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Tensor dimensions: 256 x 256 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+Custom aten::_copy_from() called!
+Tensor dimensions: 256
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 256 x 14 x 14
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 256, 14, 14]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 256 x 14 x 14
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Tensor dimensions: 512 x 256 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 512 x 7 x 7
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Tensor dimensions: 512 x 512 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 256 x 14 x 14
+Tensor dimensions: 512 x 256 x 1 x 1
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 512 x 7 x 7
+Custom allocator's delete() called!
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Tensor dimensions: 512 x 512 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 512 x 7 x 7
+Custom allocator's delete() called!
+Calling TCU OP:  convolution_overrideable 
+tcu:0,tcu:0,
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpu_input: d:cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Tensor dimensions: 512 x 512 x 3 x 3
+ See torch::conv2d  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+convolution_overrideable out2: d:tcu:0
+Custom aten::empty.memory_format() called! size: [0]
+Custom allocator's allocate() called!
+Calling TCU OP:  native_batch_norm 
+Custom aten::_copy_from() called!
+ See torch::batch_norm  d: cpu
+Tensor dimensions: 1 x 512 x 7 x 7
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+Custom aten::_copy_from() called!
+Tensor dimensions: 512
+cpucpucpucpu
+ See torch::batch_norm  out1: d:cpuTensor dimensions: 1 x 512 x 7 x 7
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[0]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+ See torch::batch_norm  out2: tcu:0
+Calling TCU OP:  add_out 
+Calling TCU OP:  relu 
+Custom aten::_copy_from() called!
+Custom aten::empty_strided() called! size:[1, 512, 7, 7]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+relu out tcu:0Tensor dimensions: 1 x 512 x 7 x 7
+Custom allocator's delete() called!
+Custom aten::empty.memory_format() called! size: [1, 512, 1, 1]
+Custom allocator's allocate() called!
+Calling TCU OP:  mean_out 
+Custom aten::_copy_from() called!
+Custom aten::_copy_from() called!
+cpuTensor dimensions: 1 x 512 x 7 x 7
+cpuTensor dimensions: 1 x 512 x 1 x 1
+call torch cpu fun mean show ret shape next
+cpuTensor dimensions: 1 x 512 x 1 x 1
+Custom aten::empty_strided() called! size:[1, 512, 1, 1]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+Custom allocator's delete() called!
+Calling TCU OP:  view 
+Custom aten::_copy_from() called!
+cpuTensor dimensions: 1 x 512 x 1 x 1
+Custom aten::empty_strided() called! size:[1, 512]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+tcu out viewd: tcu:0Tensor dimensions: 1 x 512
+Calling TCU OP:  as_strided 
+Custom aten::_copy_from() called!
+cpuTensor dimensions: 1000 x 512
+Custom aten::empty_strided() called! size:[512, 1000]
+Custom allocator's allocate() called!
+Custom aten::_copy_from() called!
+tcu out as_strided: tcu:0Tensor dimensions: 512 x 1000
+Custom aten::empty.memory_format() called! size: [1, 1000]
+Custom allocator's allocate() called!
+Calling TCU OP:  addmm_out 
+Custom aten::_copy_from() called!
+cpuTensor dimensions: 1000
